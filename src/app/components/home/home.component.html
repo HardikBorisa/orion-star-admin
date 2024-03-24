@@ -1,0 +1,33 @@
+<div class="container">
+    <button class="btn btn-primary m-4" (click)="xls()">Download as XLS</button>
+    <button class="btn btn-primary m-4" (click)="csv()">Download as CSV</button>
+  </div>
+  <div class="container mt-5">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">City</th>
+          <th scope="col">State</th>
+          <th scope="col">Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ user.fname }}</td>
+          <td>{{ user.lname }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.city }}</td>
+          <td>{{ user.state }}</td>
+          <td>{{ user.country }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
